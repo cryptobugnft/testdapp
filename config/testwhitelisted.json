@@ -1,0 +1,17 @@
+{
+    "NFT": [
+        {
+            "NAME": "Jeepney Rush",
+            "ADDRESS": "0x6d550d47828483c65357976ac3185d87d9415eea"
+        },
+        {
+            "NAME": "Cryptobug NFT",
+            "ADDRESS": "0x0244aadfc8dff8ced856326e5e91544a54f1ba08"
+        },
+        {
+            "NAME": "SmartBCH DP NFT",
+            "ADDRESS": "0xe138ea5464a36ba6f8cf0d7538942fc5234ed930"
+        }
+    ]
+}
+

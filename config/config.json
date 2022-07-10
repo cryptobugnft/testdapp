@@ -1,0 +1,30 @@
+{
+    "MAINNET": {
+        "NAME": "SmartBCH",
+        "SYMBOL": "BCH",
+        "ID": 10000,
+        "GAS_LIMIT": 285000,
+        "API": "https://sonar.cash/api?module=account&action=tokenlist&address",
+        "BALANCE": "https://sonar.cash/api?module=account&action=tokenbalance&contractaddress=@CONTRACTADDRESS&address=@ACCOUNT",
+        "WALLET": "https://sonar.cash/api?module=account&action=balance&address=@ACCOUNT"
+    },
+    "TESTNET": {
+        "NAME": "SmartBCH Testnet",
+        "SYMBOL": "BCHT",
+        "ID": 10001,
+        "GAS_LIMIT": 285000,
+        "API": "https://testnet.sonar.cash/api?module=account&action=tokenlist&address",
+        "BALANCE": "https://testnet.sonar.cash/api?module=account&action=tokenbalance&contractaddress=@CONTRACTADDRESS&address=@ACCOUNT",
+        "WALLET": "https://testnet.sonar.cash/api?module=account&action=balance&address=@ACCOUNT"
+    },
+    "MAINDAPP": {
+        "STAKING": "0x90217F23e9B2F2d93bbC91E2Ccf5c6d63A0f98b2",
+        "TOKENREWARD": "0xf8de182314d89db4b84030c35BaA4116725f79BB",
+        "NITROBOOST": "0x90261736389B7b65260098B23f568Ae9FA9C1AB2"
+    },
+    "TESTDAPP": {
+        "STAKING": "0x0fB6CDB647E8759bA4433c52Ce2BAF65C8abc4c1",
+        "TOKENREWARD": "0xf8de182314d89db4b84030c35BaA4116725f79BB",
+        "NITROBOOST": "0x10DE6607bc5Dd5fAC9753ACB281DE14e9DEfB761"
+    }
+}
