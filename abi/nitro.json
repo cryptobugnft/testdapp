@@ -2,6 +2,11 @@
 	{
 		"inputs": [
 			{
+				"internalType": "string",
+				"name": "_desc",
+				"type": "string"
+			},
+			{
 				"internalType": "contract IERC20",
 				"name": "_paytoken",
 				"type": "address"
@@ -10,63 +15,14 @@
 				"internalType": "uint256",
 				"name": "_costvalue",
 				"type": "uint256"
-			}
-		],
-		"name": "addCurrency",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_desc",
-				"type": "string"
 			},
 			{
 				"internalType": "string",
-				"name": "_bURI",
+				"name": "_baseURI",
 				"type": "string"
 			}
 		],
-		"name": "addRarityType",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "to",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
-		"name": "approve",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256[]",
-				"name": "tokenIds",
-				"type": "uint256[]"
-			},
-			{
-				"internalType": "uint256",
-				"name": "rareId",
-				"type": "uint256"
-			}
-		],
-		"name": "assignRarity",
+		"name": "AddNitroType",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -129,6 +85,24 @@
 	{
 		"inputs": [
 			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "approve",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "uint256",
 				"name": "_mintAmount",
 				"type": "uint256"
@@ -168,19 +142,6 @@
 		],
 		"name": "Mint",
 		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_mintAmount",
-				"type": "uint256"
-			}
-		],
-		"name": "mintRare",
-		"outputs": [],
-		"stateMutability": "payable",
-		"type": "function"
 	},
 	{
 		"anonymous": false,
@@ -263,7 +224,7 @@
 			},
 			{
 				"internalType": "bytes",
-				"name": "_data",
+				"name": "data",
 				"type": "bytes"
 			}
 		],
@@ -293,25 +254,12 @@
 	{
 		"inputs": [
 			{
-				"internalType": "string",
-				"name": "_newBaseExtension",
-				"type": "string"
+				"internalType": "uint256",
+				"name": "_newmaxMintAmount",
+				"type": "uint256"
 			}
 		],
-		"name": "setBaseExtension",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_newBaseURI",
-				"type": "string"
-			}
-		],
-		"name": "setBaseURI",
+		"name": "setmaxMintAmount",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -320,11 +268,16 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "_newmaxMintAmount",
+				"name": "_pid",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_costvalue",
 				"type": "uint256"
 			}
 		],
-		"name": "setmaxMintAmount",
+		"name": "setNitroPrice",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -411,6 +364,24 @@
 	{
 		"inputs": [
 			{
+				"internalType": "uint256[]",
+				"name": "tokenIds",
+				"type": "uint256[]"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_nitroType",
+				"type": "uint256"
+			}
+		],
+		"name": "updateRarity",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "uint256",
 				"name": "_pid",
 				"type": "uint256"
@@ -422,51 +393,10 @@
 		"type": "function"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "allNftItems",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "rareId",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "AllowedCrypto",
-		"outputs": [
-			{
-				"internalType": "contract IERC20",
-				"name": "paytoken",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "costvalue",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
+		"inputs": [],
+		"name": "withdrawAll",
+		"outputs": [],
+		"stateMutability": "payable",
 		"type": "function"
 	},
 	{
@@ -483,32 +413,6 @@
 				"internalType": "uint256",
 				"name": "",
 				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "baseExtension",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "baseURI",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
 			}
 		],
 		"stateMutability": "view",
@@ -541,7 +445,26 @@
 				"type": "uint256"
 			}
 		],
-		"name": "getNFTCost",
+		"name": "getCryptotoken",
+		"outputs": [
+			{
+				"internalType": "contract IERC20",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_pid",
+				"type": "uint256"
+			}
+		],
+		"name": "getNitroPrice",
 		"outputs": [
 			{
 				"internalType": "uint256",
@@ -629,17 +552,65 @@
 				"type": "uint256"
 			}
 		],
-		"name": "NFTRarity",
+		"name": "nitroTokens",
 		"outputs": [
 			{
 				"internalType": "uint256",
-				"name": "id",
+				"name": "tokenId",
 				"type": "uint256"
 			},
+			{
+				"internalType": "uint256",
+				"name": "nitroType",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "NitroTypeList",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "NitroTypes",
+		"outputs": [
 			{
 				"internalType": "string",
 				"name": "desc",
 				"type": "string"
+			},
+			{
+				"internalType": "contract IERC20",
+				"name": "paytoken",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "costvalue",
+				"type": "uint256"
 			},
 			{
 				"internalType": "string",
@@ -784,6 +755,19 @@
 				"internalType": "string",
 				"name": "",
 				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "totalNitroTypes",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
 			}
 		],
 		"stateMutability": "view",
