@@ -30,6 +30,10 @@
     "SCANNER": {
         "NAME": "Staking Scanner",
         "ABI": "/abi/scanner.json"
+    },
+    "NITROBCH": {
+        "NAME": "Nitro BCH",
+        "ABI": "/abi/nitrobch.json"
     }
 
 }
